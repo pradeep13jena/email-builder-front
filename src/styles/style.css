@@ -1,0 +1,16 @@
+#drawer::-webkit-scrollbar, #createTemplate::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* On hover: show scrollbar */
+#drawer:hover::-webkit-scrollbar, #createTemplate:hover::-webkit-scrollbar {
+  width: 3px;
+}
+#drawer::-webkit-scrollbar-thumb, #createTemplate::-webkit-scrollbar-thumb {
+  background-color: #4b5563c2; /* Gray-600 */
+  border-radius: 4px;
+}
+
+#drawer::-webkit-scrollbar-track, #createTemplate::-webkit-scrollbar-track {
+  background-color: #f3f4f6; /* Gray-100 */
+}
