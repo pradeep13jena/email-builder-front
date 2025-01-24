@@ -20,7 +20,7 @@ export default function CreateTemplate() {
 
   const getTemplate = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/template");
+      const response = await axios.get("https://easyemail.onrender.com/template");
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error fetching the template:", error);
@@ -29,7 +29,7 @@ export default function CreateTemplate() {
   
   const deleteItem = async (_id) => {
     try {
-      const response = await axios.delete("http://localhost:5000/template/delete", {
+      const response = await axios.delete("https://easyemail.onrender.com/template/delete", {
         data: { _id }
       });
       dispatch(setTemplate(response.data));
@@ -58,7 +58,7 @@ export default function CreateTemplate() {
 
     const response = await axios.post(`https://api.cloudinary.com/v1_1/dwqukaxyb/image/upload`, formData)
 
-    const res = await axios.put(`http://localhost:5000/template/image/${selectedItem}`, 
+    const res = await axios.put(`https://easyemail.onrender.com/template/image/${selectedItem}`, 
       {content : response.data.url}
     )
 

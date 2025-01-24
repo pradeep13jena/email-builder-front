@@ -28,7 +28,7 @@ export default function Drawer() {
 
   const changeColor = async (newColor) => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/changecolor/${selectedItem}`, {color: newColor})  
+      const response = await axios.put(`https://easyemail.onrender.com/template/changecolor/${selectedItem}`, {color: newColor})  
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -84,7 +84,7 @@ export default function Drawer() {
 
   const createItem = async (body) => {
     try {
-      const response = await axios.post("http://localhost:5000/template/add", body);
+      const response = await axios.post("https://easyemail.onrender.com/template/add", body);
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error creating item:", error);
@@ -93,7 +93,7 @@ export default function Drawer() {
 
   const moveUp = async (_id) => {
     try {
-      const response = await axios.put("http://localhost:5000/template/moveup", {_id})
+      const response = await axios.put("https://easyemail.onrender.com/template/moveup", {_id})
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -102,7 +102,7 @@ export default function Drawer() {
 
   const moveDown = async (_id) => {
     try {
-      const response = await axios.put("http://localhost:5000/template/movedown", {_id})
+      const response = await axios.put("https://easyemail.onrender.com/template/movedown", {_id})
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -111,7 +111,7 @@ export default function Drawer() {
 
   const addLink = async (_id, text) => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/addlink/${_id}`, {link: text.linkContent})
+      const response = await axios.put(`https://easyemail.onrender.com/template/addlink/${_id}`, {link: text.linkContent})
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -120,7 +120,7 @@ export default function Drawer() {
 
   const editText = async (_id, text) => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/edittext/${_id}`, {text: text.textContent})
+      const response = await axios.put(`https://easyemail.onrender.com/template/edittext/${_id}`, {text: text.textContent})
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -129,7 +129,7 @@ export default function Drawer() {
 
   const changeFont = async (_id, fontSize) => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/fontSize/${_id}`, fontSize)  
+      const response = await axios.put(`https://easyemail.onrender.com/template/fontSize/${_id}`, fontSize)  
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -138,7 +138,7 @@ export default function Drawer() {
 
   const changeAlign = async (_id, textAlign) => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/textalign/${_id}`, textAlign)  
+      const response = await axios.put(`https://easyemail.onrender.com/template/textalign/${_id}`, textAlign)  
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -147,7 +147,7 @@ export default function Drawer() {
 
   const changeItalic = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/italic/${selectedItem}`)
+      const response = await axios.put(`https://easyemail.onrender.com/template/italic/${selectedItem}`)
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -156,7 +156,7 @@ export default function Drawer() {
 
   const changeBold = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/bold/${selectedItem}`)
+      const response = await axios.put(`https://easyemail.onrender.com/template/bold/${selectedItem}`)
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -165,7 +165,7 @@ export default function Drawer() {
 
   const chaneUnderline = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/template/underline/${selectedItem}`)
+      const response = await axios.put(`https://easyemail.onrender.com/template/underline/${selectedItem}`)
       dispatch(setTemplate(response.data))
     } catch (error) {
       console.error("Error moving item:", error);
@@ -176,7 +176,7 @@ export default function Drawer() {
     try {
       if (width || height) {
         const response = await axios.put(
-          `http://localhost:5000/template/resize/${selectedItem}`,
+          `https://easyemail.onrender.com/template/resize/${selectedItem}`,
           {
             width: `${width}px` || undefined,
             height: `${height}px` || undefined,
